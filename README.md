@@ -2,27 +2,28 @@
 ## Assignment 1 – RLHF Implementation
 
 Student: Noor Arora  
+Student id: A1963789
 University: University of Adelaide  
 
-## Project Overview
-This project implements a Reinforcement Learning with Human Feedback (RLHF) pipeline using open-source language models.
 
-Pipeline:
+## Components
+
 1. Supervised Fine-Tuning (SFT)
-2. Reward Model Training
-3. RLHF Optimization (DPO/PPO)
+   - DistilGPT2 fine-tuned on instruction data.
+
+2. Reward Model
+   - DistilBERT trained to score preferred responses.
+
+3. Direct Preference Optimization (DPO)
+   - Aligns the SFT model using preference pairs.
+
 4. Evaluation
+   - Compares SFT and DPO responses using the reward model.
 
-## Structure
+## Files
 
-assignment1_rlhf/
-│
-├── notebooks/
-│   ├── 01_sft_baseline.ipynb
-│   ├── 02_reward_model.ipynb
-│   └── 03_rlhf_training.ipynb
-│
-├── src/
-├── data/
-├── results/
-└── reports/
+01_sft_baseline.ipynb
+02_reward_model.ipynb
+03_rl_training.ipynb
+04_evaluation.ipynb
+evaluation_results.csv
